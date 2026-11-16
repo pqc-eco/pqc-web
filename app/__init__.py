@@ -15,7 +15,9 @@ def create_app(settings=None):
     db.init_app(app)
 
     from .routes import bp
+    from .crypto_routes import bp as crypto_bp
     app.register_blueprint(bp)
+    app.register_blueprint(crypto_bp)
 
     @app.errorhandler(404)
     def not_found(_):

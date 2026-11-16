@@ -4,49 +4,13 @@ from datetime import datetime, timedelta, timezone
 
 import jwt
 import pytest
-from cryptography.hazmat.primitives import serialization
-from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+from cryptography.hazmat.primitives import serialization
 
-from app import create_app
-from app.config import Settings
-from app.cli import register
 from app.crypto import decrypt_field, encrypt_field, hash_password, verify_password
-from app.models import User, db
 from app.routes import EMAIL_CONTEXT
 
-PASSWORD = "correct horse battery"
-
-
-@pytest.fixture
-def app():
-    key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
-    settings = Settings(
-        env="test",
-        database_url="sqlite:///:memory:",
-        private_key=key,
-        data_key=AESGCM.generate_key(bit_length=256),
-        token_ttl_minutes=15,
-        issuer="pqc-web",
-        audience="pqc-web-api",
-    )
-    app = create_app(settings)
-    register(app)
-    with app.app_context():
-        db.create_all()
-        user = User(
-            username="alice",
-            password_hash=hash_password(PASSWORD),
-            email_encrypted=encrypt_field(settings.data_key, "alice@example.com", EMAIL_CONTEXT),
-        )
-        db.session.add(user)
-        db.session.commit()
-    yield app
-
-
-@pytest.fixture
-def client(app):
-    return app.test_client()
+from tests.conftest import PASSWORD  # noqa: E402
 
 
 def login(client, password=PASSWORD):
