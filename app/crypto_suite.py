@@ -91,13 +91,13 @@ def rsa_pss_verify(public_key, message: bytes, signature: bytes) -> bool:
         return False
 
 
-def rsa_oaep_sha1_wrap(public_key, data_key: bytes) -> bytes:
-    oaep = asym_padding.OAEP(mgf=asym_padding.MGF1(algorithm=hashes.SHA1()), algorithm=hashes.SHA1(), label=None)
+def rsa_oaep_sha256_wrap(public_key, data_key: bytes) -> bytes:
+    oaep = asym_padding.OAEP(mgf=asym_padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None)
     return public_key.encrypt(data_key, oaep)
 
 
-def rsa_oaep_sha1_unwrap(private_key, wrapped: bytes) -> bytes:
-    oaep = asym_padding.OAEP(mgf=asym_padding.MGF1(algorithm=hashes.SHA1()), algorithm=hashes.SHA1(), label=None)
+def rsa_oaep_sha256_unwrap(private_key, wrapped: bytes) -> bytes:
+    oaep = asym_padding.OAEP(mgf=asym_padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None)
     return private_key.decrypt(wrapped, oaep)
 
 

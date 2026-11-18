@@ -36,6 +36,7 @@ def ecdh_p256_shared_key(private_key, peer_public_key, info: bytes) -> bytes:
     return HKDF(algorithm=hashes.SHA256(), length=32, salt=None, info=info).derive(shared)
 
 
-def legacy_checksum_sha1(data: bytes) -> str:
-    """SHA-1 checksum kept only so older partner systems can verify files."""
-    return hashlib.sha1(data).hexdigest()
+def legacy_checksum_sha256(data: bytes) -> str:
+    """SHA-256 checksum for partner file verification. SHA-1 was removed:
+    it is broken for collision resistance and must not be used for new verifications."""
+    return hashlib.sha256(data).hexdigest()

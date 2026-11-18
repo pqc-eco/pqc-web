@@ -3,7 +3,7 @@ import hashlib
 from cryptography.hazmat.primitives.asymmetric import ec, rsa
 
 from app.legacy import (
-    ecdh_p256_shared_key, legacy_checksum_sha1, sign_document_ecdsa_p384,
+    ecdh_p256_shared_key, legacy_checksum_sha256, sign_document_ecdsa_p384,
     sign_legacy_rsa_sha256, verify_document_ecdsa_p384, verify_legacy_rsa_sha256,
 )
 
@@ -29,5 +29,5 @@ def test_ecdh_both_sides_derive_same_key():
     assert ecdh_p256_shared_key(a, b.public_key(), info) == ecdh_p256_shared_key(b, a.public_key(), info)
 
 
-def test_legacy_sha1_checksum_matches_hashlib():
-    assert legacy_checksum_sha1(b"file bytes") == hashlib.sha1(b"file bytes").hexdigest()
+def test_legacy_sha256_checksum_matches_hashlib():
+    assert legacy_checksum_sha256(b"file bytes") == hashlib.sha256(b"file bytes").hexdigest()

@@ -7,7 +7,7 @@ from app.crypto_suite import (
     aes128_gcm_decrypt, aes128_gcm_encrypt, aes256_cbc_decrypt, aes256_cbc_encrypt,
     blake2b_digest, chacha20_poly1305_decrypt, chacha20_poly1305_encrypt, ecdsa_p256_sign,
     ecdsa_p256_verify, ed448_sign, ed448_verify, hkdf_sha384_derive, hmac_sha384, hmac_sha512,
-    pbkdf2_sha512_derive, rsa_oaep_sha1_unwrap, rsa_oaep_sha1_wrap, rsa_pss_sign, rsa_pss_verify,
+    pbkdf2_sha512_derive, rsa_oaep_sha256_unwrap, rsa_oaep_sha256_wrap, rsa_pss_sign, rsa_pss_verify,
     scrypt_derive, sha3_256_digest, sha3_512_digest, x448_shared_key,
 )
 
@@ -45,11 +45,11 @@ def test_rsa_pss_roundtrip():
     assert not rsa_pss_verify(key.public_key(), b"other", sig)
 
 
-def test_rsa_oaep_sha1_roundtrip():
+def test_rsa_oaep_sha256_roundtrip():
     key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
     data_key = os.urandom(32)
-    wrapped = rsa_oaep_sha1_wrap(key.public_key(), data_key)
-    assert rsa_oaep_sha1_unwrap(key, wrapped) == data_key
+    wrapped = rsa_oaep_sha256_wrap(key.public_key(), data_key)
+    assert rsa_oaep_sha256_unwrap(key, wrapped) == data_key
 
 
 def test_ecdsa_p256_roundtrip():
