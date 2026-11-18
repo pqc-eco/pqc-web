@@ -1,0 +1,1487 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:f92ad86b-5202-4b34-89c1-158788ae5495",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-18T18:04:07Z",
+    "tools": {
+      "services": [
+        {
+          "provider": {
+            "name": "PQCA"
+          },
+          "name": "cbomkit-theia",
+          "version": "edge",
+          "services": [
+            {
+              "name": "Certificate File Plugin"
+            },
+            {
+              "name": "Secret Detection Plugin"
+            },
+            {
+              "name": "OpenSSL Config Plugin"
+            },
+            {
+              "name": "Problematic CA Detection Plugin"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "0fc2b88c-2646-4d88-b8b2-eca4153544c0",
+      "type": "cryptographic-asset",
+      "name": "RSA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/certificate/dir/cert.pem"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "cryptoFunctions": [
+            "sign"
+          ]
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "bom-ref": "a83b5792-28c2-488f-a170-2f048a6cdb2a",
+      "type": "cryptographic-asset",
+      "name": "SHA256",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/certificate/dir/cert.pem"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "256",
+          "cryptoFunctions": [
+            "digest"
+          ]
+        }
+      }
+    },
+    {
+      "bom-ref": "7102f3e2-19db-479f-a866-3b4f59331382",
+      "type": "cryptographic-asset",
+      "name": "SHA256-RSA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/certificate/dir/cert.pem"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "256",
+          "padding": "pkcs1v15",
+          "cryptoFunctions": [
+            "sign"
+          ]
+        },
+        "oid": "1.2.840.113549.1.1.11"
+      }
+    },
+    {
+      "bom-ref": "b3303bbc-398d-4e11-8d61-7693097e742f",
+      "type": "cryptographic-asset",
+      "name": "RSA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/certificate/dir/cert.pem"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "cryptoFunctions": [
+            "encapsulate",
+            "decapsulate",
+            "sign"
+          ]
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "bom-ref": "02904305-162c-4b3c-9e47-2be3211d91d9",
+      "type": "cryptographic-asset",
+      "name": "RSA-2048",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/certificate/dir/cert.pem"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "public-key",
+          "algorithmRef": "b3303bbc-398d-4e11-8d61-7693097e742f",
+          "value": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA51++lv+zQLGFvUryv4zwmN0JaS+ZTbYjffTldoQ/x5NT0ht+K8HvRshQi/+GIpHB051rpL4sytfyAxoYuPNhZZY3nFh+VMTJRxvMsVBvWobPOqTY3LMlGnwwK8lwt6HBbRpOL3tpADmrRpapVexB9qyotLeY5zF3VdrLTHorVDUhbPPosg0CuFd0+p/4V6cTvFV7AcBe73f+PoncgHAtWMFCogfjwG1L6aLfoSfDmjNauYtwlxBRG1AqyS4f6AtrKznYa+0ZOGCuqM/j8NzUE71WQQcn84hNh+mER1nUQ1XDn1odi9M+NgubQq9tywwK2sv/XbjmCpfnCynb7+MphwIDAQAB",
+          "size": 2048,
+          "format": "PEM"
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "bom-ref": "f222d5a4-bbfd-488e-8c83-72d85e277e10",
+      "type": "cryptographic-asset",
+      "name": "Linagora CA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/certificate/dir/cert.pem"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "certificate",
+        "certificateProperties": {
+          "subjectName": "Linagora CA",
+          "issuerName": "Linagora CA",
+          "notValidBefore": "2015-09-14T08:50:19Z",
+          "notValidAfter": "2025-09-11T08:50:19Z",
+          "signatureAlgorithmRef": "7102f3e2-19db-479f-a866-3b4f59331382",
+          "subjectPublicKeyRef": "02904305-162c-4b3c-9e47-2be3211d91d9",
+          "certificateFormat": "X.509",
+          "certificateExtension": "pem"
+        }
+      }
+    },
+    {
+      "bom-ref": "2f3c3ead-085b-4dc1-9d5f-f5f083da6d72",
+      "type": "cryptographic-asset",
+      "name": "ECDSA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "config/tls/test-pinned-cert.pem"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "cryptoFunctions": [
+            "sign"
+          ]
+        },
+        "oid": "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "bom-ref": "3a0b5f7f-6f20-473b-89a7-a1efada7ec8d",
+      "type": "cryptographic-asset",
+      "name": "SHA256",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "config/tls/test-pinned-cert.pem"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "256",
+          "cryptoFunctions": [
+            "digest"
+          ]
+        }
+      }
+    },
+    {
+      "bom-ref": "87c0483c-ed1a-468b-97e1-28904ab133ba",
+      "type": "cryptographic-asset",
+      "name": "ECDSA-SHA256",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "config/tls/test-pinned-cert.pem"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "256",
+          "cryptoFunctions": [
+            "sign"
+          ]
+        },
+        "oid": "1.2.840.10045.4.3.2"
+      }
+    },
+    {
+      "bom-ref": "5b53300e-80f7-4743-b4bb-1144d3890114",
+      "type": "cryptographic-asset",
+      "name": "ECDSA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "config/tls/test-pinned-cert.pem"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "cryptoFunctions": [
+            "sign"
+          ]
+        },
+        "oid": "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "bom-ref": "170d0584-344e-4075-b36f-bbb0edd95c06",
+      "type": "cryptographic-asset",
+      "name": "ECDSA",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "config/tls/test-pinned-cert.pem"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "public-key",
+          "algorithmRef": "5b53300e-80f7-4743-b4bb-1144d3890114",
+          "value": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEdrPozV7Vz9udeIYaG90mYYoYluCN6bcVAU6aBlVd0kHmaGe+yRqlGCSHaNmtcLiANiP/vVFM0ytKvCWZpfQncg==",
+          "format": "PEM"
+        },
+        "oid": "1.2.840.10045.2.1"
+      }
+    },
+    {
+      "bom-ref": "5d3190c5-c4f3-4765-9592-ca50b0101561",
+      "type": "cryptographic-asset",
+      "name": "pqc-web.tryturnwise.com",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "config/tls/test-pinned-cert.pem"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "certificate",
+        "certificateProperties": {
+          "subjectName": "pqc-web.tryturnwise.com",
+          "issuerName": "pqc-web.tryturnwise.com",
+          "notValidBefore": "2026-11-16T11:41:45Z",
+          "notValidAfter": "2027-11-16T11:41:45Z",
+          "signatureAlgorithmRef": "87c0483c-ed1a-468b-97e1-28904ab133ba",
+          "subjectPublicKeyRef": "170d0584-344e-4075-b36f-bbb0edd95c06",
+          "certificateFormat": "X.509",
+          "certificateExtension": "pem"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "generic-api-key",
+      "description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "app/config.py",
+            "line": 16
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/scanner/pem/pem_test.go",
+            "line": 29
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/scanner/pem/pem_test.go",
+            "line": 61
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/scanner/pem/pem_test.go",
+            "line": 123
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/scanner/pem/pem_test.go",
+            "line": 176
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/scanner/pem/pem_test.go",
+            "line": 376
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/scanner/pem/pem_test.go",
+            "line": 435
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/scanner/pem/pem_test.go",
+            "line": 476
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/scanner/plugins/certificates/certificate_test.go",
+            "line": 32
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/scanner/plugins/certificates/certificate_test.go",
+            "line": 65
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/scanner/plugins/secrets/secrets_test.go",
+            "line": 34
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/scanner/plugins/secrets/secrets_test.go",
+            "line": 78
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "bom-ref": "31f6fad1-652a-47db-b800-bbf6d2645673",
+      "type": "cryptographic-asset",
+      "name": "RSA-2048",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/private_key/dir/rsa.pem",
+            "line": 0
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "size": 2048,
+          "format": "PEM"
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "bom-ref": "860e6237-3c75-43d9-ae4c-9752a119266f",
+      "type": "cryptographic-asset",
+      "name": "RSA-2048",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/private_key/dir/rsa.pem",
+            "line": 0
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "public-key",
+          "value": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuw4T755fepEyXTM66pzf6nv8NtnukQTMGnhmBFIFHp/P2vEpxjXUBBDUpzKkVFR3wuK9O1FNmRDAGNGYC0N/9cZNdhykA1NixJfKQzncN31VJTmNqJNZW0x7H9ZGoh2aE0zCCZpRlC1Rf5rL0SVlBoQkn/n9LnYFwyLLIK5/d/y/NZVL6Z6Lcyvga0zRajamLIjY0Dy/8YIwVV6kaSsHeRv2cOB03eam6gbhLGIz/l8wuJhIn1rOyJLQ36IOJymbbNmcC7+2hEQJP40qLvH7hZ1LaAkgQUHjfi8RvH2T1Jmce7XGPxCoEd0yfeFz+pL1KeSWNey6cL3N5hJZE8EntQIDAQAB",
+          "size": 2048,
+          "format": "PEM"
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "generic-api-key",
+      "description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/configs/web.config",
+            "line": 0
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "generic-api-key",
+      "description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/configs/web.config",
+            "line": 0
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "planetscale-password",
+      "description": "Discovered a PlanetScale password, which could lead to unauthorized database operations and data breaches.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/database/connection_strings.txt",
+            "line": 3
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "password"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "jwt",
+      "description": "Uncovered a JSON Web Token, which may lead to unauthorized access to web applications and sensitive user data.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/jwt/example.txt",
+            "line": 2
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "token"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "generic-api-key",
+      "description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/jwt/owasp-juice-shop.ts",
+            "line": 217
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "jwt",
+      "description": "Uncovered a JSON Web Token, which may lead to unauthorized access to web applications and sensitive user data.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/jwt/owasp-juice-shop.ts",
+            "line": 263
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "token"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "jwt",
+      "description": "Uncovered a JSON Web Token, which may lead to unauthorized access to web applications and sensitive user data.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/jwt/test_jwt.txt",
+            "line": 0
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "token"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "jwt",
+      "description": "Uncovered a JSON Web Token, which may lead to unauthorized access to web applications and sensitive user data.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/jwt/test_jwt.txt",
+            "line": 1
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "token"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/rsa/GeekMasher GPG.asc",
+            "line": 0
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/rsa/GeekMasher_GPG_with_headers.asc",
+            "line": 0
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/rsa/rsa.js",
+            "line": 2
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "private-key",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/rsa/rsa.json",
+            "line": 2
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key"
+        }
+      }
+    },
+    {
+      "bom-ref": "5c81be2c-2d7e-4820-b19a-97571e0adec0",
+      "type": "cryptographic-asset",
+      "name": "RSA-3072",
+      "description": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/rsa/ssh_rsa",
+            "line": 0
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "size": 3072,
+          "format": "PEM"
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "generic-api-key",
+      "description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/.sentryclirc",
+            "line": 1
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "generic-api-key",
+      "description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/.sentryclirc",
+            "line": 2
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "datadog-access-token",
+      "description": "Detected a Datadog Access Token, potentially risking monitoring and analytics data exposure and manipulation.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/datadog.txt",
+            "line": 6
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "token"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "datadog-access-token",
+      "description": "Detected a Datadog Access Token, potentially risking monitoring and analytics data exposure and manipulation.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/datadog.txt",
+            "line": 10
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "token"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "datadog-access-token",
+      "description": "Detected a Datadog Access Token, potentially risking monitoring and analytics data exposure and manipulation.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/datadog.txt",
+            "line": 36
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "token"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "sentry-access-token",
+      "description": "Found a Sentry.io Access Token (old format), risking unauthorized access to error tracking services and sensitive application data.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/dotenv",
+            "line": 0
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "token"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "generic-api-key",
+      "description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/dotenv",
+            "line": 1
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "okta-access-token",
+      "description": "Identified an Okta Access Token, which may compromise identity management services and user authentication data.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/okta.txt",
+            "line": 0
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "token"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "okta-access-token",
+      "description": "Identified an Okta Access Token, which may compromise identity management services and user authentication data.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/okta.txt",
+            "line": 1
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "token"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "okta-access-token",
+      "description": "Identified an Okta Access Token, which may compromise identity management services and user authentication data.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/okta.txt",
+            "line": 2
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "token"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "okta-access-token",
+      "description": "Identified an Okta Access Token, which may compromise identity management services and user authentication data.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/okta.txt",
+            "line": 3
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "token"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "sendgrid-api-token",
+      "description": "Detected a SendGrid API token, posing a risk of unauthorized email service operations and data exposure.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/sendgrid.py",
+            "line": 0
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "token"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "generic-api-key",
+      "description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/sentry.properties",
+            "line": 0
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "generic-api-key",
+      "description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/sentry.properties",
+            "line": 1
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "generic-api-key",
+      "description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/terraform.tf",
+            "line": 9
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "generic-api-key",
+      "description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/secrets/dir/vendors/webpack_sentry.js",
+            "line": 6
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "key"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "generic-api-key",
+      "description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/unknown_key_size/dir/temurin-22.jdk/conf/security/java.security",
+            "line": 34
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "key"
+        }
+      }
+    },
+    {
+      "bom-ref": "095c577d-fc95-4bb5-b10d-8f26fe4098c8",
+      "type": "cryptographic-asset",
+      "name": "SHA256",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/openssl/dir/openssl.cnf"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "bom-ref": "28d9c5da-b394-4efb-9062-d60831ae2ad6",
+      "type": "cryptographic-asset",
+      "name": "TLSv1.3",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/openssl/dir/openssl.cnf"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "protocol",
+        "protocolProperties": {
+          "type": "tls",
+          "version": "1.3",
+          "cipherSuites": [
+            {
+              "name": "TLS_AES_128_GCM_SHA256",
+              "algorithms": [
+                "b8d5091a-f493-47e4-a331-ee04148f33d7",
+                "7682c26e-8191-4642-ad32-05c3731e92f9"
+              ],
+              "identifiers": [
+                "0x13",
+                "0x01"
+              ]
+            },
+            {
+              "name": "TLS_CHACHA20_POLY1305_SHA256",
+              "algorithms": [
+                "89c117ea-69c3-4af2-b9ef-8921de9cca34",
+                "6b04a0ef-10f5-4d28-a8c9-0459aeb11825"
+              ],
+              "identifiers": [
+                "0x13",
+                "0x03"
+              ]
+            }
+          ],
+          "cryptoRefArray": [
+            "b8d5091a-f493-47e4-a331-ee04148f33d7",
+            "7682c26e-8191-4642-ad32-05c3731e92f9",
+            "89c117ea-69c3-4af2-b9ef-8921de9cca34",
+            "6b04a0ef-10f5-4d28-a8c9-0459aeb11825"
+          ]
+        }
+      }
+    },
+    {
+      "bom-ref": "2ace4bfe-aebf-4da3-b990-17a2c6205e78",
+      "type": "cryptographic-asset",
+      "name": "CHACHA20 POLY1305",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/openssl/dir/openssl.cnf"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {}
+      }
+    },
+    {
+      "bom-ref": "3f460540-3d7e-4c89-977a-71e103d983a8",
+      "type": "cryptographic-asset",
+      "name": "TLSv1.2",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/openssl/dir/openssl.cnf"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "protocol",
+        "protocolProperties": {
+          "type": "tls",
+          "version": "1.2",
+          "cipherSuites": [
+            {
+              "name": "TLS_AES_128_GCM_SHA256",
+              "algorithms": [
+                "9a3a33c2-12d1-4453-87e6-d4263a6a9b3f",
+                "095c577d-fc95-4bb5-b10d-8f26fe4098c8"
+              ],
+              "identifiers": [
+                "0x13",
+                "0x01"
+              ]
+            },
+            {
+              "name": "TLS_CHACHA20_POLY1305_SHA256",
+              "algorithms": [
+                "2ace4bfe-aebf-4da3-b990-17a2c6205e78",
+                "51903dbc-5386-4e13-b65a-ffe446788936"
+              ],
+              "identifiers": [
+                "0x13",
+                "0x03"
+              ]
+            }
+          ],
+          "cryptoRefArray": [
+            "9a3a33c2-12d1-4453-87e6-d4263a6a9b3f",
+            "095c577d-fc95-4bb5-b10d-8f26fe4098c8",
+            "2ace4bfe-aebf-4da3-b990-17a2c6205e78",
+            "51903dbc-5386-4e13-b65a-ffe446788936"
+          ]
+        }
+      }
+    },
+    {
+      "bom-ref": "51903dbc-5386-4e13-b65a-ffe446788936",
+      "type": "cryptographic-asset",
+      "name": "SHA256",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/openssl/dir/openssl.cnf"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "bom-ref": "6b04a0ef-10f5-4d28-a8c9-0459aeb11825",
+      "type": "cryptographic-asset",
+      "name": "SHA256",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/openssl/dir/openssl.cnf"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "bom-ref": "7682c26e-8191-4642-ad32-05c3731e92f9",
+      "type": "cryptographic-asset",
+      "name": "SHA256",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/openssl/dir/openssl.cnf"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "bom-ref": "84372650-eca3-4497-9403-2b439efd92e0",
+      "type": "file",
+      "name": "openssl.cnf",
+      "description": "OpenSSL configuration",
+      "properties": [
+        {
+          "name": "theia:openssl:MinProtocol",
+          "value": "TLSv1.2"
+        },
+        {
+          "name": "theia:openssl:MaxProtocol",
+          "value": "TLSv1.3"
+        },
+        {
+          "name": "theia:openssl:CipherString",
+          "value": "ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES256-GCM-SHA384"
+        },
+        {
+          "name": "theia:openssl:Options",
+          "value": "ServerPreference,PrioritizeChaCha"
+        },
+        {
+          "name": "theia:openssl:CAfile",
+          "value": "/etc/ssl/certs/ca-bundle.crt"
+        },
+        {
+          "name": "theia:openssl:CApath",
+          "value": "/etc/ssl/certs"
+        },
+        {
+          "name": "theia:openssl:default_md",
+          "value": "sha256"
+        },
+        {
+          "name": "theia:openssl:Groups",
+          "value": "X25519MLKEM768:X25519:P-256"
+        }
+      ],
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/openssl/dir/openssl.cnf"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "89c117ea-69c3-4af2-b9ef-8921de9cca34",
+      "type": "cryptographic-asset",
+      "name": "CHACHA20 POLY1305",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/openssl/dir/openssl.cnf"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {}
+      }
+    },
+    {
+      "bom-ref": "9a3a33c2-12d1-4453-87e6-d4263a6a9b3f",
+      "type": "cryptographic-asset",
+      "name": "AES128 GCM",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/openssl/dir/openssl.cnf"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "mode": "gcm"
+        }
+      }
+    },
+    {
+      "bom-ref": "b8d5091a-f493-47e4-a331-ee04148f33d7",
+      "type": "cryptographic-asset",
+      "name": "AES128 GCM",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "cbomkit-theia/testdata/openssl/dir/openssl.cnf"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "mode": "gcm"
+        }
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "7102f3e2-19db-479f-a866-3b4f59331382",
+      "dependsOn": [
+        "0fc2b88c-2646-4d88-b8b2-eca4153544c0",
+        "a83b5792-28c2-488f-a170-2f048a6cdb2a"
+      ]
+    },
+    {
+      "ref": "87c0483c-ed1a-468b-97e1-28904ab133ba",
+      "dependsOn": [
+        "2f3c3ead-085b-4dc1-9d5f-f5f083da6d72",
+        "3a0b5f7f-6f20-473b-89a7-a1efada7ec8d"
+      ]
+    },
+    {
+      "ref": "3f460540-3d7e-4c89-977a-71e103d983a8",
+      "dependsOn": [
+        "9a3a33c2-12d1-4453-87e6-d4263a6a9b3f",
+        "095c577d-fc95-4bb5-b10d-8f26fe4098c8",
+        "2ace4bfe-aebf-4da3-b990-17a2c6205e78",
+        "51903dbc-5386-4e13-b65a-ffe446788936"
+      ]
+    },
+    {
+      "ref": "28d9c5da-b394-4efb-9062-d60831ae2ad6",
+      "dependsOn": [
+        "b8d5091a-f493-47e4-a331-ee04148f33d7",
+        "7682c26e-8191-4642-ad32-05c3731e92f9",
+        "89c117ea-69c3-4af2-b9ef-8921de9cca34",
+        "6b04a0ef-10f5-4d28-a8c9-0459aeb11825"
+      ]
+    }
+  ]
+}

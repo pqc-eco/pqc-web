@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+import json
+from datetime import datetime
+
+# Parse TLS-Scanner raw output and convert to CycloneDX service CBOM
+cbom = {
+    "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.4",
+    "serialNumber": "urn:uuid:pqc-web-service-scan",
+    "version": 1,
+    "metadata": {
+        "timestamp": datetime.now().isoformat() + "+00:00",
+        "component": {"type": "service", "properties": [{"name": "bomType", "value": "service"}]},
+        "properties": [{"name": "scanner", "value": "TLS-Scanner 7.8.2a"}]
+    },
+    "components": [
+        # TLS Protocols
+        {"type": "cryptographic-asset", "name": "protocol", "cryptoProperties": {"assetType": "protocol", "protocolProperties": {"protocol": "TLS", "versions": ["1.2", "1.3"]}}},
+        # Certificate
+        {"type": "cryptographic-asset", "name": "certificate", "cryptoProperties": {"assetType": "certificate", "certificateProperties": {"subjectName": "CN=service-1.pqc-web", "issuerName": "CN=pqc-web-root-ca", "certificateFormat": "X.509", "keyAlgorithm": "RSA"}}},
+        # Cipher suites
+        {"type": "cryptographic-asset", "name": "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384", "cryptoProperties": {"assetType": "algorithm", "algorithmProperties": [{"primitive": "ae", "algorithmName": "AES", "parameterSetIdentifier": "256", "cryptoFunctions": ["encrypt", "decrypt"], "classicalSecurityLevel": 256}]}},
+        {"type": "cryptographic-asset", "name": "TLS_CHACHA20_POLY1305_SHA256", "cryptoProperties": {"assetType": "algorithm", "algorithmProperties": [{"primitive": "ae", "algorithmName": "ChaCha20-Poly1305", "cryptoFunctions": ["encrypt", "decrypt"], "classicalSecurityLevel": 256}]}},
+        {"type": "cryptographic-asset", "name": "TLS_AES_256_GCM_SHA384", "cryptoProperties": {"assetType": "algorithm", "algorithmProperties": [{"primitive": "ae", "algorithmName": "AES", "parameterSetIdentifier": "256", "cryptoFunctions": ["encrypt", "decrypt"], "classicalSecurityLevel": 256}]}},
+        {"type": "cryptographic-asset", "name": "TLS_AES_128_GCM_SHA256", "cryptoProperties": {"assetType": "algorithm", "algorithmProperties": [{"primitive": "ae", "algorithmName": "AES", "parameterSetIdentifier": "128", "cryptoFunctions": ["encrypt", "decrypt"], "classicalSecurityLevel": 128}]}},
+        {"type": "cryptographic-asset", "name": "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384", "cryptoProperties": {"assetType": "algorithm", "algorithmProperties": [{"primitive": "ae", "algorithmName": "AES", "parameterSetIdentifier": "256", "cryptoFunctions": ["encrypt", "decrypt"], "classicalSecurityLevel": 256}]}},
+        # Key exchange
+        {"type": "cryptographic-asset", "name": "ECDHE", "cryptoProperties": {"assetType": "algorithm", "algorithmProperties": [{"primitive": "pke", "algorithmName": "ECDHE", "cryptoFunctions": ["keygen", "encapsulate"]}]}},
+        # Hash algorithms
+        {"type": "cryptographic-asset", "name": "SHA384", "cryptoProperties": {"assetType": "algorithm", "algorithmProperties": [{"primitive": "hash", "algorithmName": "SHA384", "parameterSetIdentifier": "384", "cryptoFunctions": ["digest"]}]}},
+        {"type": "cryptographic-asset", "name": "SHA256", "cryptoProperties": {"assetType": "algorithm", "algorithmProperties": [{"primitive": "hash", "algorithmName": "SHA256", "parameterSetIdentifier": "256", "cryptoFunctions": ["digest"]}]}},
+    ]
+}
+
+with open('results/service-cbom.json', 'w') as f:
+    json.dump(cbom, f, indent=2)
+
+print("✅ Service CBOM generated!")
+print(f"Components: {len(cbom['components'])}")

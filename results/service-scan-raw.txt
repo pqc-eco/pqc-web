@@ -1,0 +1,570 @@
+[32mPerforming scan with scan detail set to NORMAL[m
+[1;31mCould not load TrustAnchors. This means that you are running TLS-Scanner without its submodules. If you want to evaluate if certificates are trusted by browsers you need to initialize submodules.You can do this by running the following command:'git submodule update --init --recursive'[m
+[?25h[32m[localhost:5001] [ 1/55] Common bugs probe executed[m
+[?25h[32m[localhost:5001] [ 2/55] Server name indication (SNI) probe executed[m
+[?25h[32m[localhost:5001] [ 3/55] Compression probe executed[m
+[?25h[32m[localhost:5001] [ 4/55] Protocol version probe executed[m
+[?25h[32m[localhost:5001] [ 5/55] Cipher suite order probe executed[m
+[?25h[32m[localhost:5001] [ 6/55] Client certificate authentication support probe executed[m
+[?25h[32m[localhost:5001] [ 7/55] Signature Hash Algorithm Order probe executed[m
+[?25h[32m[localhost:5001] [ 8/55] Record fragmentation probe executed[m
+[?25h[32m[localhost:5001] [ 9/55] Early CCS probe executed[m
+[?25h[32m[localhost:5001] [10/55] Tokenbinding probe executed[m
+[?25h[32m[localhost:5001] [11/55] HTTP header probe executed[m
+[?25h[32m[localhost:5001] [12/55] Cipher suite probe executed[m
+[?25h[32m[localhost:5001] [13/55] Extensions probe executed[m
+[?25h[32m[localhost:5001] [14/55] Signature and hash algorithm probe executed[m
+[?25h[32m[localhost:5001] [15/55] TLS Fallback SCSV probe executed[m
+[?25h[32m[localhost:5001] [16/55] Hello retry probe executed[m
+[?25h[32m[localhost:5001] [17/55] ESNI probe executed[m
+[?25h[32m[localhost:5001] [18/55] HTTP false start probe executed[m
+[?25h[32m[localhost:5001] [19/55] Certificate probe executed[m
+[33mX.509 Certificate does not contain an EC PublicKey. Returning null.[m
+[?25h[32m[localhost:5001] [20/55] TLS Handshake Latency probe executed[m
+[?25h[32m[localhost:5001] [21/55] EC point formats probe executed[m
+[?25h[32m[localhost:5001] [22/55] Resumption probe executed[m
+[?25h[32m[localhost:5001] [23/55] Renegotiation probe executed[m
+[?25h[32m[localhost:5001] [24/55] Padding oracle probe executed[m
+[?25h[32m[localhost:5001] [25/55] Alpaca attack probe executed[m
+[?25h[32m[localhost:5001] [26/55] Named groups probe executed[m
+[?25h[32m[localhost:5001] [27/55] Session ticket probe executed[m
+[?25h[32m[localhost:5001] [28/55] Session ticket manipulation probe executed[m
+[?25h[32m[localhost:5001] [29/55] Session ticket padding oracle probe executed[m
+[?25h[32m[localhost:5001] [30/55] Session ticket collector for afterprobe probe executed[m
+[?25h[32m[localhost:5001] [31/55] Named groups order probe executed[m
+[?25h[32m[localhost:5001] [32/55] Invalid curve probe executed[m
+[32m23 scheduled probes were not executed[m
+[32mFinished scan[m
+[?25h[32m[0mScanned in: 114s
+TLS-Scanner Report
+Generated with: TLS-Scanner 7.8.2a (TLS-Attacker 7.14.0a, Java 25.0.5.0.2 (Microsoft))
+
+Report for localhost:5001
+[0;1m[36m
+------------------------------------------------------------
+Versions
+
+[0mDTLS 1.0                        : [34mcould not test[0m
+DTLS 1.2                        : [34mcould not test[0m
+DTLS 1.3                        : [34mcould not test[0m
+SSL 2.0                         : [32mfalse[0m
+SSL 3.0                         : [32mfalse[0m
+TLS 1.0                         : [32mfalse[0m
+TLS 1.1                         : [32mfalse[0m
+TLS 1.2                         : [32mtrue[0m
+TLS 1.3                         : [32mtrue[0m
+[0;1m[36m
+------------------------------------------------------------
+Supported Cipher suites
+
+[0m[32mTLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384[0m
+[32mTLS_CHACHA20_POLY1305_SHA256[0m
+TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+[32mTLS_AES_128_GCM_SHA256[0m
+[32mTLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256[0m
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+[32mTLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256[0m
+[32mTLS_AES_256_GCM_SHA384[0m
+[0;1m[36m
+------------------------------------------------------------
+Supported in TLS 1.2(server order)
+
+[0m[32mTLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384[0m
+[32mTLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256[0m
+[32mTLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256[0m
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+[0;1m[36m
+------------------------------------------------------------
+Supported in TLS 1.3(server order)
+
+[0m[32mTLS_AES_256_GCM_SHA384[0m
+[32mTLS_CHACHA20_POLY1305_SHA256[0m
+[32mTLS_AES_128_GCM_SHA256[0m
+[0;1m[36m
+------------------------------------------------------------
+Perfect Forward Secrecy
+
+[0mSupports PFS                    : [32mtrue[0m
+Prefers PFS                     : [32mtrue[0m
+Supports Only PFS               : [32mtrue[0m
+[0;1m[36m
+------------------------------------------------------------
+CipherSuite General
+
+[0mEnforces CipherSuite ordering   : [32mtrue[0m
+Avoids weaker CipherSuites (according to RFC 9325): true
+[0;1m[36m
+------------------------------------------------------------
+Perfect Forward Secrecy
+
+[0mSupports PFS                    : [32mtrue[0m
+Prefers PFS                     : [32mtrue[0m
+Supports Only PFS               : [32mtrue[0m
+[0;1m[36m
+------------------------------------------------------------
+CipherSuite General
+
+[0mEnforces CipherSuite ordering   : [32mtrue[0m
+[0;1m[36m
+------------------------------------------------------------
+Client Authentication
+
+[0mSupported                       : false
+Required                        : [34mcould not test[0m
+[0;1m[36m
+------------------------------------------------------------
+Supported Extensions
+
+[0mKEY_SHARE
+SERVER_NAME_INDICATION
+ENCRYPT_THEN_MAC
+ELLIPTIC_CURVES
+SESSION_TICKET
+SUPPORTED_VERSIONS
+EXTENDED_MASTER_SECRET
+RENEGOTIATION_INFO
+MAX_FRAGMENT_LENGTH
+EC_POINT_FORMATS
+[0;1m[36m
+------------------------------------------------------------
+Extensions
+
+[0mSecure Renegotiation            : [32mtrue[0m
+Extended Master Secret          : [32mtrue[0m
+Encrypt Then Mac                : [32mtrue[0m
+Tokenbinding                    : false
+Certificate Status Request      : false
+Certificate Status Request v2   : false
+ESNI                            : false
+Supports Raw Public Key Certificates: false
+[0;1m[36m
+------------------------------------------------------------
+TLS 1.3 Named Groups
+
+[0mSECP521R1
+FFDHE8192
+ECDH_X448
+FFDHE3072
+FFDHE6144
+FFDHE4096
+SECP384R1
+SECP256R1
+ECDH_X25519
+FFDHE2048
+[0;1m[36m
+------------------------------------------------------------
+Supported Named Groups
+
+[0mECDH_X25519
+SECP521R1
+ECDH_X448
+SECP384R1
+SECP256R1
+[0;1m[36m
+------------------------------------------------------------
+NamedGroups General
+
+[0mEnforces client's named group ordering: [33mfalse[0m
+[0;1m[36m
+------------------------------------------------------------
+Supported Signature and Hash Algorithms
+
+[0mRSA_SHA384
+RSA_SHA256
+RSA_SHA512
+RSA_PSS_RSAE_SHA512
+RSA_SHA224
+RSA_PSS_RSAE_SHA384
+RSA_PSS_RSAE_SHA256
+[0;1m[36m
+------------------------------------------------------------
+Signature and Hash Algorithms General
+
+[0mEnforces client's signature has algorithm ordering: [32mtrue[0m
+[0;1m[36m
+------------------------------------------------------------
+Supported Signature and Hash Algorithms TLS 1.3
+
+[0mRSA_PSS_RSAE_SHA512
+RSA_PSS_RSAE_SHA384
+RSA_PSS_RSAE_SHA256
+[0;1m[36m
+------------------------------------------------------------
+Post Quantum
+
+[0mSupports pure post quantum key exchange: false
+Supports hybrid post quantum key exchange: false
+Supports ML-KEM                 : false
+Supports deprecated Kyber draft : [32mfalse[0m
+Prefers post quantum key exchange: false
+Supports post quantum signatures: false
+Supports ML-DSA                 : false
+Supports SLH-DSA                : false
+Has full post quantum certificate chain: false
+[0;1m[36m
+------------------------------------------------------------
+Supported Compressions
+
+[0mNULL
+[0;1m[36m
+------------------------------------------------------------
+Elliptic Curve Point Formats
+
+[0mUncompressed                    : true
+ANSIX962 Prime                  : true
+ANSIX962 Char2                  : false
+TLS 1.3 ANSIX962  SECP          : false
+[0;1m[36m
+------------------------------------------------------------
+Record Fragmentation
+
+[0mSupports Record Fragmentation   : true
+Mininum Record Length           : 1
+[0;1m[36m
+------------------------------------------------------------
+Common Bugs [EXPERIMENTAL]
+
+[0mVersion Intolerant              : [32mfalse[0m
+CipherSuite Intolerant          : [32mfalse[0m
+Extension Intolerant            : [32mfalse[0m
+CS Length Intolerant (>512 Byte): [32mfalse[0m
+Compression Intolerant          : [32mfalse[0m
+ALPN Intolerant                 : [32mfalse[0m
+CH Length Intolerant            : [32mfalse[0m
+NamedGroup Intolerant           : [32mfalse[0m
+Empty last Extension Intolerant : [32mfalse[0m
+SigHashAlgo Intolerant          : [32mfalse[0m
+Big ClientHello Intolerant      : [32mfalse[0m
+2nd CipherSuite Byte Bug        : [32mfalse[0m
+Ignores offered Cipher suites   : [32mfalse[0m
+Reflects offered Cipher suites  : [32mfalse[0m
+Ignores offered NamedGroups     : [32mfalse[0m
+Ignores offered SigHashAlgos    : [32mfalse[0m
+Grease CipherSuite Intolerant   : [32mfalse[0m
+Grease NamedGroup Intolerant    : [32mfalse[0m
+Grease SigHashAlgo Intolerant   : [32mfalse[0m
+[0;1m[36m
+------------------------------------------------------------
+TLS 1.3 Hello Retry Request
+
+[0mSends Hello Retry Request       : true
+Issues Cookie                   : false
+[0;1m[36m
+------------------------------------------------------------
+Attack Vulnerabilities
+
+[0mPadding Oracle                  : [32mnot vulnerable[0m
+Bleichenbacher                  : [34mcould not test (not vulnerable)[0m
+Raccoon                         : [32mnot vulnerable[0m
+Direct Raccoon                  : [34mcould not test (not vulnerable)[0m
+CRIME                           : [32mnot vulnerable[0m
+Breach                          : [32mnot vulnerable[0m
+Invalid Curve                   : [32mnot vulnerable[0m
+Invalid Curve (ephemeral)       : [32mnot vulnerable[0m
+Invalid Curve (twist)           : [32mnot vulnerable[0m
+SSL Poodle                      : [32mnot vulnerable[0m
+Logjam                          : [32mnot vulnerable[0m
+Sweet 32                        : [32mnot vulnerable[0m
+General DROWN                   : [34mcould not test (not vulnerable)[0m
+Extra Clear DROWN               : [34mcould not test (not vulnerable)[0m
+Heartbleed                      : [34mcould not test (not vulnerable)[0m
+EarlyCcs                        : [32mnot vulnerable[0m
+ALPACA                          : [31mvulnerable[0m
+Renegotiation Attack (ext)
+-1.hs without ext, 2.hs with ext: [32mnot vulnerable[0m
+-1.hs with ext, 2.hs without ext: [32mnot vulnerable[0m
+Renegotiation Attack (cs)
+-1.hs without cs, 2.hs with cs  : [32mnot vulnerable[0m
+-1.hs with cs, 2.hs without cs  : [32mnot vulnerable[0m
+[0;1m[36m
+------------------------------------------------------------
+Alpaca Details
+
+[0mStrict ALPN                     : [31mfalse[0m
+Strict SNI                      : [31mfalse[0m
+Vulnerable ALPACA               : [31mvulnerable[0m
+[0;1m[36m
+------------------------------------------------------------
+Bleichenbacher response map
+
+[0mNo test results
+No test results
+[0;1m[36m
+------------------------------------------------------------
+PaddingOracle response map
+
+[0mNo vulnerability present to identify
+[0;1m[36m
+------------------------------------------------------------
+Padding Oracle Details
+
+[0m[32mCLASSIC_DYNAMIC	SHORT	TLS12	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384                | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mCLASSIC_DYNAMIC	SHORT	TLS12	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256                | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+No test results
+[0;1m[36m
+------------------------------------------------------------
+Direct Raccoon Results
+
+[0mNo test results
+[0;1m[36m
+------------------------------------------------------------
+Invalid Curve Details
+
+[0mNo Vulnerabilities found
+[0;1m[36m
+------------------------------------------------------------
+Certificate Chain (Certificate 1 of 1)
+
+[0mChain ordered                   : [32mtrue[0m
+Contains Trust Anchor           : [32mfalse[0m
+Generally Trusted               : [31mnull[0m
+Custom Trusted                  : [31mfalse[0m
+[0;1m[4m[36m--|Certificate Issues
+
+[0m[31mYour peer did not provide a certificate which is valid for the scanned domain[0m
+[0;1m[4m[36m--|Certificate #1
+
+[0m Subject                        : CN=service-1.pqc-web
+ Issuer                         : CN=service-1.pqc-web
+ Valid From                     : [32m2026-11-18T18:11:57.000Z[0m
+ Valid Till                     : [32m2027-11-18T18:11:57.000Z[0m
+ Expires in                     : [32m364 days.[0m
+ PublicKey Type:                : RSA
+ Modulus                        : 0xd0624990db761bc0bffd6e62e7ec6b7901138903cdac7bd2ce1b3c405c94c85bfe49ffaba28d61d685568932800964215f1763dd2d3ef4c785a7a2257649487763c7afb1d218a6b7a33f39f25d4f85af31c8343ffe859db0e0722960b47cab2648904db2cab2e0299d3275c11da4d601cb615b19cb1ca27e6bda1bc037e8bc9a6ebcb73e1fc2d736f564da5360bd221b8f93680293aa9ae95c71f10a4ea7cec2b43037f18e29163779e5cfb5fef3058ec09bc06e0c899200c845bbba72b68e1996717493936030e959569dbea6df359837838577463653ddc0cb00fa70f7551d22c5251803e14a550bd4d277fd2f78b03ae457b1c68ff3808c10397149cbe8db
+ Public exponent                : 0x10001
+ Signature Algorithm            : RSA_PKCS1
+ Hash Algorithm                 : [32mSHA256[0m
+ OCSP Supported                 : [33mfalse[0m
+ ROCA (simple)                  : [32mfalse[0m
+ Fingerprint (SHA256)           : 0x7E 2B 89 BE FF 44 5B B7 E9 C9 16 FB 8B 5F 36 39 E1 C3 E5 69 02 02 72 B3 58 38 70 40 44 62 D8 F0
+[0;1m[36m
+------------------------------------------------------------
+Session
+
+[0mSupports Session ID Resumption  : [32mtrue[0m
+Issues Session Tickets          : [32mtrue[0m
+Supports Session Ticket Resumption: [32mtrue[0m
+Issues TLS 1.3 Session Tickets directly after handshake: true
+Issues TLS 1.3 Session Tickets with Application Data: true
+Supports TLS 1.3 PSK            : false
+Supports TLS 1.3 PSK-DHE        : true
+Selects TLS 1.3 PSK-DHE when also TLS 1.3 PSK is provided by client: true
+Supports 0-RTT                  : false
+[0;1m[36m
+------------------------------------------------------------
+SessionTicketEval
+
+[0m[0;1m[4m[36m--|Summary
+
+[0m Ticket contains plain secret   : FALSE
+ Ticket use default STEK (enc)  : FALSE
+ Ticket use default STEK (MAC)  : FALSE
+ No (full) MAC check            : FALSE
+ Vulnerable to Padding Oracle   : FALSE
+ Tickets can be reused          : TRUE
+ Allows ciphersuite change      : FALSE
+ Tickets resumable in different version: FALSE
+
+[0;1m[4m[36m--|Details
+
+[0mResuming TLS12 Ticket in
+ 	TLS13:                        : FALSE
+Resuming TLS13 Ticket in
+ 	TLS12:                        : FALSE
+ Allows ciphersuite change [TLS12]: FALSE
+ Allows ciphersuite change [TLS13]: FALSE
+ Tickets can be reused [TLS12]  : TRUE
+ Tickets can be reused [TLS13]  : TRUE
+[0;1m[4m[36m--|Manipulation
+
+[0mManipulation Overview TLS12:  ________________ ________________ ________________ ________________ ________________ ________________ ________________ ________________ ________________ ________________
+Manipulation Overview TLS13:  ________________ ________________ ________________ ________________ ________________ ________________ ________________ ________________ ________________ ________________ ________________ ________________ ________________
+A [TLS12] 	: ResponseFingerprint[ Messages=[SERVER_HELLO,CHANGE_CIPHER_SPEC,FINISHED,], Records=[Record,Record,Record,], SocketState=UP]
+A [TLS13] 	: ResponseFingerprint[ Messages=[SERVER_HELLO,CHANGE_CIPHER_SPEC,ENCRYPTED_EXTENSIONS,FINISHED,], Records=[Record,Record,Record,Record,], SocketState=UP]
+# [TLS12] 	: ResponseFingerprint[ Messages=[SERVER_HELLO,CHANGE_CIPHER_SPEC,], Records=[Record,Record,Record,], SocketState=UP]
+# [TLS13] 	: ResponseFingerprint[ Messages=[Alert(FATAL,ILLEGAL_PARAMETER),], Records=[Record,], SocketState=CLOSED]
+_ [TLS12] 	: ResponseFingerprint[ Messages=[SERVER_HELLO,CERTIFICATE,ECDHE_SERVER_KEY_EXCHANGE,SERVER_HELLO_DONE,], Records=[Record,Record,Record,Record,], SocketState=DATA_AVAILABLE]
+_ [TLS13] 	: ResponseFingerprint[ Messages=[SERVER_HELLO,CHANGE_CIPHER_SPEC,ENCRYPTED_EXTENSIONS,CERTIFICATE,CERTIFICATE_VERIFY,FINISHED,], Records=[Record,Record,Record,Record,Record,Record,], SocketState=UP]
+.         	: *not tested/no result*
+?         	: *multiple classifications/no more chars left to classify*
+[0;1m[4m[36m----|Padding Oracle
+
+[0m[0;1m[4m[36m------|TLS12
+
+[0m   Overall Result               : FALSE
+[0;1m[36m
+------------------------------------------------------------
+Padding Oracle Details
+
+[0m[32mTLS12	PaddingOffset=32                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS12	PaddingOffset=64                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS12	PaddingOffset=36                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS12	PaddingOffset=8                                                            | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS12	PaddingOffset=40                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS12	PaddingOffset=72                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS12	PaddingOffset=44                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS12	PaddingOffset=16                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS12	PaddingOffset=48                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS12	PaddingOffset=80                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS12	PaddingOffset=24                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS12	PaddingOffset=56                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS12	PaddingOffset=28                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[0;1m[4m[36m------|TLS13
+
+[0m   Overall Result               : FALSE
+[0;1m[36m
+------------------------------------------------------------
+Padding Oracle Details
+
+[0m[32mTLS13	PaddingOffset=32                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS13	PaddingOffset=64                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS13	PaddingOffset=36                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS13	PaddingOffset=8                                                            | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS13	PaddingOffset=40                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS13	PaddingOffset=72                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS13	PaddingOffset=44                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS13	PaddingOffset=16                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS13	PaddingOffset=48                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS13	PaddingOffset=80                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS13	PaddingOffset=24                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS13	PaddingOffset=56                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[32mTLS13	PaddingOffset=28                                                           | No behavior difference   | NOT VULNERABLE         | P: 1.000[0m
+[0;1m[4m[36m----|Statistics
+
+[0m[0;1m[4m[36m------|TLS12
+
+[0m   Ticket length                : 160(x18) 
+   Keyname/Prefix length        : 16
+   Found ASCII Strings          : 
+                                : [7 Bytes] "[YI[WXx"
+[0;1m[4m[36m------|TLS13
+
+[0m   Ticket length                : 208(x42) 
+   Keyname/Prefix length        : 16
+   Found ASCII Strings          : 
+                                : [8 Bytes] "~2":4A"Z"
+                                : [10 Bytes] "F.]87vnMyd"
+[0;1m[36m
+------------------------------------------------------------
+Renegotioation
+
+[0mSecure (Extension)              : false
+Secure (CipherSuite)            : false
+Insecure                        : [32mfalse[0m
+[0;1m[36m
+------------------------------------------------------------
+HSTS
+
+[0mNot supported
+[0;1m[36m
+------------------------------------------------------------
+HPKP
+
+[0mNot supported
+[0;1m[36m
+------------------------------------------------------------
+HTTPS Response Header
+
+[0mServer:Werkzeug/3.1.9 Python/3.14.2
+Date:Wed, 18 Nov 2026 19:55:37 GMT
+Content-Type:application/json
+Content-Length:22
+Connection:close
+[0;1m[36m
+------------------------------------------------------------
+HTTP False Start
+
+[0mHTTP False Start                : true
+[0;1m[36m
+------------------------------------------------------------
+Entropy
+
+[0mUses Unixtime                   : false
+[0;1m[4m[36m--|Nonce (Random)
+
+[0m Datapoints                     : 202
+ Bytes total                    : [34m5216 (not enough data collected)[0m
+ Duplicates                     : false
+ Failed Entropy Test            : false
+ Failed Fourier Test            : false
+ Failed Frequency Test          : false
+ Failed Runs Test               : false
+ Failed Longest Run Test        : false
+ Failed Monobit Test            : false
+ Failed TemplateTests           : 0.01 %
+[0;1m[4m[36m--|Session ID
+
+[0m Datapoints                     : 125
+ Bytes total                    : [34m4000 (not enough data collected)[0m
+ Duplicates                     : false
+ Failed Entropy Test            : false
+ Failed Fourier Test            : false
+ Failed Frequency Test          : false
+ Failed Runs Test               : false
+ Failed Longest Run Test        : true
+ Failed Monobit Test            : false
+ Failed TemplateTests           : 0.01 %
+[0;1m[4m[36m--|CBC IV
+
+[0m Datapoints                     : 0
+ Bytes total                    : [34m0 (not enough data collected)[0m
+ Duplicates                     : false
+ Failed Entropy Test            : true
+ Failed Fourier Test            : true
+ Failed Frequency Test          : true
+ Failed Runs Test               : true
+ Failed Longest Run Test        : true
+ Failed Monobit Test            : true
+ Failed TemplateTests           : 0.0 %
+[0;1m[36m
+------------------------------------------------------------
+PublicKey Parameter
+
+[0mEC PublicKey reuse              : [32mfalse[0m
+DH PublicKey reuse              : [34mcannot be tested[0m
+Uses Common DH Primes           : [34mcannot be tested[0m
+Uses only prime moduli          : [34mcannot be tested[0m
+Uses only safe-prime moduli     : [34mcannot be tested[0m
+[0;1m[36m
+------------------------------------------------------------
+Scoring results
+
+[0mScore: 3300
+[0;1m[36m
+------------------------------------------------------------
+Recommendations
+
+[0m[31mThe server does not reject invalid SNI names. If possible configure your server to use strict SNI and strict ALPN verification[0m
+[31mNo detailed information available. No recommendation available[0m
+[33mHSTS is disabled. Enable HSTS[0m
+[33mThe server does not reject unsupported ALPN Strings. If possible configure your server to use strict ALPN verification[0m
+Server does not enforce client's group order. Enforce client's group order
+The server does not reject invalid SNI names. If possible configure your server to use strict SNI verification
+[0;1m[36m
+------------------------------------------------------------
+Guidelines
+
+[0m[0;1m[4m[36m--|Guideline BSI TR-02102-2 (v2025-01)
+
+[0m[32mAdhered: 20[0m
+[31mViolated: 5[0m
+[33mFailed: 0[0m
+Condition Not Met: 1
+
+[0;1m[4m[36m--|Guideline NIST SP 800-52r2
+
+[0m[32mAdhered: 24[0m
+[31mViolated: 8[0m
+[33mFailed: 5[0m
+Condition Not Met: 6
+
+[0;1m[4m[36m--|Guideline IETF RFC 9325: Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)
+
+[0m[32mAdhered: 21[0m
+[31mViolated: 5[0m
+[33mFailed: 1[0m
+Condition Not Met: 2
+
+[m
+[?25h
